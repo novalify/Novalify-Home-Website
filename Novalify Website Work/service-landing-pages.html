@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Landing Page Design Services - Novalify</title>
+    <link rel="icon" href="Images/logo.png" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F87926",
+                        "primary-hover": "#E66315",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#0D0D0D",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                    backgroundImage: {
+                        'glass-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+    class="text-[#111814] dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root">
+        <div class="fixed top-0 left-0 w-full h-screen overflow-hidden pointer-events-none z-[-1]">
+            <div class="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px]">
+            </div>
+            <div class="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]">
+            </div>
+        </div>
+        <div class="fixed top-6 left-0 w-full z-50 flex justify-center px-4">
+            <header
+                class="flex w-full max-w-[960px] items-center justify-between border border-white/10 bg-[#0D0D0D]/70 backdrop-blur-xl px-6 py-3 rounded-full shadow-2xl shadow-black/50">
+                <div class="flex items-center gap-1 text-white">
+                    <div class="h-8 flex items-center justify-center">
+                        <img src="Images/logo.png" alt="Novalify Logo" class="h-full w-auto object-contain">
+                    </div>
+                    <a href="index.html"
+                        class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Novalify</a>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <nav class="flex items-center gap-6">
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="about.html">About</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="services.html">Services</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="portfolio.html">Portfolio</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="insights.html">Insights</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button onclick="window.location.href='contact.html'"
+                        class="hidden md:flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-all orange-glow nav-button-tread">
+                        <span class="truncate">Start a Project</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </header>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+            <button id="close-menu-btn" class="absolute top-8 right-8 text-white p-2">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <nav class="flex flex-col items-center gap-8 text-2xl font-bold text-white">
+                <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="hover:text-primary transition-colors" href="services.html">Services</a>
+                <a class="hover:text-primary transition-colors" href="portfolio.html">Portfolio</a>
+                <a class="hover:text-primary transition-colors" href="insights.html">Insights</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </nav>
+            <button onclick="window.location.href='contact.html'"
+                class="mt-8 flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-all orange-glow nav-button-tread">
+                <span class="truncate">Start a Project</span>
+            </button>
+        </div>
+
+        <main
+            class="flex-1 relative z-10 flex flex-col items-center w-full bg-background-light dark:bg-background-dark shadow-2xl">
+
+            <!-- Hero Section -->
+            <section
+                class="relative w-full min-h-[60vh] flex flex-col justify-center items-center px-4 pt-32 pb-16 overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <div class="w-full h-full bg-cover bg-center bg-fixed opacity-90"
+                        style="background-image: url('Images/hero-bg.png')"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/10 via-transparent to-[#0D0D0D] dark:from-[#0D0D0D]/30 dark:to-[#0D0D0D]">
+                    </div>
+                </div>
+                <div
+                    class="layout-content-container flex flex-col max-w-[1000px] flex-1 items-center justify-center text-center gap-8 relative z-10">
+                    <div class="flex flex-col gap-6 items-center max-w-4xl">
+                        <div class="flex items-center gap-2 text-primary animate-fade-in-up"
+                            style="animation-duration: 0.6s;">
+                            <span class="material-symbols-outlined text-sm">web_asset</span>
+                            <span class="text-sm font-bold tracking-widest uppercase">Landing Pages</span>
+                        </div>
+                        <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-[-0.033em] text-gradient-silver drop-shadow-2xl animate-fade-in-up"
+                            style="animation-duration: 0.8s;">
+                            High-Converting Landing Pages
+                        </h1>
+                        <h2 class="text-gray-400 text-base md:text-xl font-normal leading-relaxed max-w-2xl animate-fade-in-up"
+                            style="animation-duration: 1s;">
+                            Turn visitors into customers with strategically designed landing pages that drive action.
+                        </h2>
+                        <button onclick="window.location.href='contact.html'"
+                            class="mt-4 flex cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold tracking-[0.015em] hover:scale-105 transition-transform orange-glow">
+                            Get Your Free Consultation
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overview Section -->
+            <section class="w-full py-20 px-4 md:px-20 relative bg-[#F8F4F9]">
+                <div class="layout-content-container max-w-[1200px] mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div data-aos="fade-right" class="flex flex-col gap-6">
+                            <h2 class="text-gray-900 text-3xl md:text-5xl font-bold leading-tight tracking-[-0.02em]">
+                                Landing Pages That Convert
+                            </h2>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                A landing page has one job: convert visitors into leads or customers. Every elementâ€”from
+                                the headline to the CTA buttonâ€”is strategically crafted to guide users toward taking
+                                action.
+                            </p>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                Our landing page design service combines persuasive copywriting, compelling visuals, and
+                                conversion-focused layouts to maximize your ROI from marketing campaigns.
+                            </p>
+                        </div>
+                        <div data-aos="fade-left" class="grid grid-cols-2 gap-6">
+                            <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+                                <div class="text-4xl font-bold text-primary mb-2">5x</div>
+                                <div class="text-gray-600 text-sm">Higher Conversion Rates</div>
+                            </div>
+                            <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+                                <div class="text-4xl font-bold text-primary mb-2">60%</div>
+                                <div class="text-gray-600 text-sm">Lower Bounce Rates</div>
+                            </div>
+                            <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+                                <div class="text-4xl font-bold text-primary mb-2">2x</div>
+                                <div class="text-gray-600 text-sm">Better ROI</div>
+                            </div>
+                            <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm">
+                                <div class="text-4xl font-bold text-primary mb-2">A/B</div>
+                                <div class="text-gray-600 text-sm">Testing Ready</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="w-full py-20 px-4 md:px-20 relative bg-background-dark">
+                <div class="layout-content-container max-w-[1200px] mx-auto">
+                    <div class="flex flex-col items-center text-center gap-3 mb-16">
+                        <h2 class="text-white text-3xl md:text-5xl font-bold leading-tight tracking-[-0.02em]">
+                            What Makes Our Landing Pages Effective
+                        </h2>
+                        <p class="text-gray-400 max-w-2xl text-base md:text-lg">
+                            Every element designed to maximize conversions
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div data-aos="fade-up" data-aos-delay="0"
+                            class="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">psychology</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Conversion Psychology</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Strategic use of color, placement, and messaging based on proven conversion principles
+                                and user behavior.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="100"
+                            class="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">edit_note</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Compelling Copy</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Persuasive headlines, benefit-driven content, and clear CTAs that speak directly to your
+                                target audience.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200"
+                            class="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">ads_click</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Strategic CTAs</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Prominent, action-oriented call-to-action buttons positioned for maximum visibility and
+                                engagement.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="300"
+                            class="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">verified_user</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Trust Signals</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Social proof, testimonials, security badges, and credibility indicators that build
+                                confidence.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="400"
+                            class="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">integration_instructions</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Lead Capture Forms</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Optimized forms integrated with your CRM, email marketing, or analytics platforms.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="500"
+                            class="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">science</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">A/B Testing Setup</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Built for experimentation with multiple variants to continuously improve conversion
+                                rates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="w-full py-20 px-4 md:px-20 relative bg-[#F8F4F9]">
+                <div class="layout-content-container max-w-[1200px] mx-auto">
+                    <div class="flex flex-col items-center text-center gap-3 mb-16">
+                        <h2 class="text-gray-900 text-3xl md:text-5xl font-bold leading-tight tracking-[-0.02em]">
+                            Perfect For
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div data-aos="fade-up" data-aos-delay="0"
+                            class="flex gap-4 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                            <div
+                                class="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-2xl">campaign</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Marketing Campaigns</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Dedicated pages for PPC ads, social media campaigns, or email marketing that align
+                                    with your messaging.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="100"
+                            class="flex gap-4 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                            <div
+                                class="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Product Launches</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Showcase new products or services with focused pages that highlight features and
+                                    benefits.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200"
+                            class="flex gap-4 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                            <div
+                                class="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-2xl">event</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Event Registration</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Drive sign-ups for webinars, conferences, or workshops with compelling event landing
+                                    pages.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="300"
+                            class="flex gap-4 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                            <div
+                                class="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-2xl">download</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Lead Magnets</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Capture leads with pages offering ebooks, whitepapers, templates, or free trials.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="w-full py-24 px-4 md:px-20 relative bg-background-dark overflow-hidden">
+                <div
+                    class="layout-content-container max-w-[1000px] mx-auto relative z-10 flex flex-col items-center text-center gap-8 p-12 rounded-[3rem] border border-white/10 bg-white/5">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-gray-800 flex items-center justify-center text-white shadow-[0_0_30px_rgba(248,121,38,0.3)] mb-2">
+                        <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                    </div>
+                    <h2 class="text-white text-4xl md:text-6xl font-black tracking-tight leading-tight">
+                        Ready to Boost<br />Your Conversions?
+                    </h2>
+                    <p class="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed">
+                        Let's create a landing page that turns your traffic into tangible results.
+                    </p>
+                    <button onclick="window.location.href='contact.html'"
+                        class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold tracking-[0.015em] hover:scale-105 transition-transform orange-glow">
+                        Start Your Landing Page Project
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            class="relative lg:fixed bottom-0 left-0 w-full bg-[#050505] border-t border-white/5 pt-24 pb-8 lg:pt-52 lg:pb-10 overflow-hidden z-0">
+            <div
+                class="layout-content-container max-w-[1200px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-16 relative z-10 text-center lg:text-left">
+                <div class="flex flex-col gap-6 col-span-2 lg:col-span-1 items-center lg:items-start">
+                    <div class="flex items-center gap-1 text-white">
+                        <div class="h-8 flex items-center justify-center">
+                            <img src="Images/logo.png" alt="Novalify Logo" class="h-full w-auto object-contain">
+                        </div>
+                        <h2 class="text-white text-xl font-bold tracking-tight">Novalify</h2>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Smart, simple, online reality. We combine aesthetic precision with technical mastery to
+                        help
+                        brands define the future.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4 items-center lg:items-start">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Explore</h3>
+                    <ul class="flex flex-col gap-3">
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="index.html">Home</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="about.html">About
+                                Us</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="services.html">Services</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="insights.html">Insights</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4 items-center lg:items-start">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Services</h3>
+                    <ul class="flex flex-col gap-3">
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#web-design">Web Design</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#development">Development</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#growth">Growth & SEO</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#hosting">Domain & Hosting</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#ui-ux">UI/UX Design</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#branding">Branding</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#website-redesign">Website Redesign</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#landing-pages">Landing Pages</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#maintenance-support">Maintenance & Support</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4 col-span-2 lg:col-span-1 items-center lg:items-start">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Connect</h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Facebook -->
+                        <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all group"
+                            href="https://facebook.com/novalifydigitalsolutions" target="_blank">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036c-2.048 0-2.606.498-2.606 1.693v2.278h3.922l-.566 3.667h-3.356v7.98h-5.208Z" />
+                            </svg>
+                        </a>
+                        <!-- X (Twitter) -->
+                        <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all group"
+                            href="https://x.com/novalifydigitalsolutions" target="_blank">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all group"
+                            href="https://instagram.com/novalifydigitalsolutions" target="_blank">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.03.084c-1.277.06-2.149.264-2.91.563a5.874 5.874 0 0 0-2.124 1.388 5.878 5.878 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076.008 8.354-.005 8.764.001 12.023c.007 3.259.021 3.667.083 4.947.061 1.277.264 2.149.563 2.911.308.789.72 1.457 1.388 2.123a5.872 5.872 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552 1.278.056 1.689.069 4.947.063 3.257-.007 3.668-.021 4.947-.082 1.28-.06 2.147-.265 2.91-.563a5.881 5.881 0 0 0 2.123-1.388 5.881 5.881 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912.056-1.28.07-1.69.063-4.948-.006-3.258-.02-3.667-.081-4.947-.06-1.28-.264-2.148-.564-2.911a5.892 5.892 0 0 0-1.387-2.123 5.857 5.857 0 0 0-2.128-1.38C19.074.322 18.202.12 16.924.066 15.647.009 15.236-.006 11.977 0 8.718.008 8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.736 3.736 0 0 1-1.382-.895 3.695 3.695 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228-.06-1.264-.072-1.644-.08-4.848-.006-3.204.006-3.583.061-4.848.05-1.169.246-1.805.408-2.228.216-.561.477-.96.895-1.382a3.705 3.705 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417 1.265-.06 1.644-.072 4.848-.08 3.203-.006 3.583.006 4.85.062 1.168.05 1.804.244 2.227.408.56.216.96.475 1.382.895.421.42.681.817.9 1.378.165.422.362 1.056.417 2.227.06 1.265.074 1.645.08 4.848.005 3.203-.006 3.583-.061 4.848-.051 1.17-.245 1.805-.408 2.23-.216.56-.477.96-.896 1.38a3.705 3.705 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418-1.266.06-1.645.072-4.85.079-3.204.007-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442 1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024 6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16 4 4 0 0 1 8 12.008" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all group"
+                            href="https://linkedin.com/in/novalifydigitalsolutions" target="_blank">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all group"
+                            href="https://tiktok.com/@novalifydigitalsolutions" target="_blank">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" />
+                            </svg>
+                        </a>
+                        <!-- Discord -->
+                        <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all group"
+                            href="https://discord.gg/novalifydigitalsolutions" target="_blank">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.772-.6083 1.1588a18.3218 18.3218 0 00-5.4964 0C9.0831 3.6646 8.8476 3.2677 8.634 2.8917a.077.077 0 00-.0792-.0371 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561 20.03 20.03 0 005.9937 3.0336.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057 13.111 13.111 0 01-1.872-8.99.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873 8.99.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286 20.079 20.079 0 005.9943-3.0336.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="mt-4 flex flex-col gap-2 text-center lg:text-left">
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Email Us</p>
+                            <a href="mailto:hello@novalify.com"
+                                class="text-white hover:text-primary transition-colors font-medium text-sm">hello@novalify.com</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Call Us</p>
+                            <a href="tel:+1234567890"
+                                class="text-white hover:text-primary transition-colors font-medium text-sm">+1 (234) 567-890</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="layout-content-container max-w-[1200px] mx-auto px-6 pt-8 border-t border-white/5 flex flex-col lg:flex-row justify-between items-center gap-4 relative z-10 text-center lg:text-left">
+                <p class="text-gray-600 text-xs">&copy; 2025 Novalify. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="text-gray-600 hover:text-gray-300 text-xs transition-colors" href="privacy.html">Privacy Policy</a>
+                    <a class="text-gray-600 hover:text-gray-300 text-xs transition-colors" href="terms.html">Terms of Service</a>
+                    <a class="text-gray-600 hover:text-gray-300 text-xs transition-colors" href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 z-50 translate-y-24 opacity-0 transition-all duration-500 flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full orange-glow hover:bg-primary-hover hover:scale-110 cursor-pointer">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+

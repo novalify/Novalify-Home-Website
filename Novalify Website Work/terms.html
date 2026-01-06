@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Terms of Service - Novalify</title>
+    <link rel="icon" href="Images/logo.png" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F87926",
+                        "primary-hover": "#E66315",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#0D0D0D",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                    backgroundImage: {
+                        'glass-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+
+<body
+    class="text-[#111814] dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root">
+        <!-- Navigation -->
+        <div class="fixed top-6 left-0 w-full z-50 flex justify-center px-4">
+            <header
+                class="flex w-full max-w-[960px] items-center justify-between border border-white/10 bg-[#0D0D0D]/70 backdrop-blur-xl px-6 py-3 rounded-full shadow-2xl shadow-black/50">
+                <div class="flex items-center gap-1 text-white">
+                    <div class="h-8 flex items-center justify-center">
+                        <img src="Images/logo.png" alt="Novalify Logo" class="h-full w-auto object-contain">
+                    </div>
+                    <a href="index.html"
+                        class="text-white text-lg font-bold leading-tight tracking-[-0.015em] hover:text-primary transition-colors">Novalify</a>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <nav class="flex items-center gap-6">
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+                            href="services.html">Services</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+                            href="portfolio.html">Portfolio</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+                            href="insights.html">Insights</a>
+                        <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+                            href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </header>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+            <button id="close-menu-btn" class="absolute top-8 right-8 text-white p-2">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <nav class="flex flex-col items-center gap-8 text-2xl font-bold text-white">
+                <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="hover:text-primary transition-colors" href="services.html">Services</a>
+                <a class="hover:text-primary transition-colors" href="portfolio.html">Portfolio</a>
+                <a class="hover:text-primary transition-colors" href="insights.html">Insights</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </nav>
+        </div>
+
+        <main
+            class="flex-1 relative z-10 flex flex-col items-center w-full bg-background-light dark:bg-background-dark shadow-2xl pt-32 pb-20 px-6">
+            <div class="layout-content-container max-w-[800px] w-full flex flex-col gap-10">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Terms of Service</h1>
+                    <p class="text-gray-400">Last updated: December 29, 2025</p>
+                </div>
+
+                <div class="prose prose-invert prose-lg max-w-none text-gray-300">
+                    <p>Welcome to Novalify. By accessing our website and using our services, you agree to be bound by
+                        these Terms of Service. Please read them carefully.</p>
+
+                    <h3 class="text-white font-bold mt-8 mb-4 text-xl">1. Acceptance of Terms</h3>
+                    <p>By using our services, you agree to these terms. If you do not agree, please do not use our
+                        website or services.</p>
+
+                    <h3 class="text-white font-bold mt-8 mb-4 text-xl">2. Services</h3>
+                    <p>Novalify provides web design, development, and digital marketing services. The specific
+                        deliverables and timelines for processed projects will be outlined in a separate agreement or
+                        proposal.</p>
+
+                    <h3 class="text-white font-bold mt-8 mb-4 text-xl">3. Intellectual Property</h3>
+                    <p>All content on this website, including text, graphics, logos, and code, is the property of
+                        Novalify or its content suppliers and is protected by copyright laws. Unauthorized use is
+                        prohibited.</p>
+
+                    <h3 class="text-white font-bold mt-8 mb-4 text-xl">4. Limitation of Liability</h3>
+                    <p>Novalify shall not be liable for any indirect, incidental, special, consequential, or punitive
+                        damages resulting from your use of or inability to use our services.</p>
+
+                    <h3 class="text-white font-bold mt-8 mb-4 text-xl">5. Changes to Terms</h3>
+                    <p>We reserve the right to modify these terms at any time. We will provide notice of significant
+                        changes by updating the date at the top of this page.</p>
+
+                    <h3 class="text-white font-bold mt-8 mb-4 text-xl">6. Contact Us</h3>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <p class="mt-2 text-primary font-medium">hello@novalify.com</p>
+                </div>
+            </div>
+        </main>
+
+        <footer
+            class="relative lg:fixed bottom-0 left-0 w-full bg-[#050505] border-t border-white/5 pt-24 pb-8 lg:pt-52 lg:pb-10 overflow-hidden z-0">
+            <div
+                class="layout-content-container max-w-[1200px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-16 relative z-10 text-center lg:text-left">
+                <div class="flex flex-col gap-6 col-span-2 lg:col-span-1 items-center lg:items-start">
+                    <div class="flex items-center gap-1 text-white">
+                        <div class="h-8 flex items-center justify-center">
+                            <img src="Images/logo.png" alt="Novalify Logo" class="h-full w-auto object-contain">
+                        </div>
+                        <h2 class="text-white text-xl font-bold tracking-tight">Novalify</h2>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Smart, simple, online reality. We combine aesthetic precision with technical mastery to help
+                        brands define the future.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4 items-center lg:items-start">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Explore</h3>
+                    <ul class="flex flex-col gap-3">
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="about.html">About</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html">Services</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="portfolio.html">Portfolio</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="insights.html">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4 items-center lg:items-start">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Services</h3>
+                    <ul class="flex flex-col gap-3">
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#web-design">Web Design</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#development">Development</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#growth">Growth & SEO</a></li>
+                        <li><a class="text-gray-400 hover:text-primary transition-colors text-sm"
+                                href="services.html#hosting">Domain & Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4 col-span-2 lg:col-span-1 items-center lg:items-start">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Connect</h3>
+                    <!-- Contact Info -->
+                    <div class="mt-4 flex flex-col gap-2 text-center lg:text-left">
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Email Us</p>
+                            <a href="mailto:hello@novalify.com"
+                                class="text-white hover:text-primary transition-colors font-medium text-sm">hello@novalify.com</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Call Us</p>
+                            <a href="tel:+1234567890"
+                                class="text-white hover:text-primary transition-colors font-medium text-sm">+1 (234)
+                                567-890</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="layout-content-container max-w-[1200px] mx-auto px-6 pt-8 border-t border-white/5 flex flex-col lg:flex-row justify-between items-center gap-4 relative z-10 text-center lg:text-left">
+                <p class="text-gray-600 text-xs">&copy; 2025 Novalify. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="text-gray-600 hover:text-gray-300 text-xs transition-colors" href="privacy.html">Privacy
+                        Policy</a>
+                    <a class="text-gray-600 hover:text-gray-300 text-xs transition-colors" href="terms.html">Terms of
+                        Service</a>
+                    <a class="text-gray-600 hover:text-gray-300 text-xs transition-colors"
+                        href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
